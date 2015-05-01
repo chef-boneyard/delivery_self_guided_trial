@@ -7,9 +7,10 @@ Use your existing means to provision a new node with one of our supported platfo
 ## Setup Provisioning Node
 If you choose not to use a provisioning node do this on your workstation. These use generic install instructions for the prerequisites if you perfer a different install method it should be fine to use your own. You will want open these links in a new tab.
 
-1. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-2. [Install Chefdk](https://downloads.chef.io/chef-dk/)
-3. Get License Key: ```curl -o delivery.license '{your_license_url}'```
-4. Get Delivery Cluster: ```git clone https://github.com/opscode-cookbooks/delivery-cluster.git```
+1. Install build-essential on linux or developer tools on mac
+2. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+3. [Install Chefdk](https://downloads.chef.io/chef-dk/)
+4. Get License Key: ```curl -o delivery.license '{your_license_url}'```
+5. Get Delivery Cluster: ```git clone https://github.com/opscode-cookbooks/delivery-cluster.git```
 
 ### [Continue in README](README.md)
