@@ -1,3 +1,5 @@
-# delivery_self_guided_trial
-A repo to hold docs and issues for the self guided delivery trial.
+# Delivery Self Guided Trial
+Welcome to the Delivery Self Guided trial. 
 
+[AWS BASED INSTALL](AWS.md)
+[SSH BASED INSTALL](SSH.md)
