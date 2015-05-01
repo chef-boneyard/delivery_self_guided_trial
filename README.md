@@ -8,8 +8,10 @@ These docs will guide you through setting up delivery and configuring pipelines 
 An important consideration in picking your install method/location is network access. If you will be integrating with any apis make sure you can access them from the environment you choose to install delivery in. Often times we setup a cluster only to find an internal api we want hit is not available. Think things like Jenkins or your own internal deployment tool, etc.
 
 ## Installation
+1. Create a provisioning node
+  * [Creating a provisioning node](provisioning_node.md)
 1. Pick your install path and follow the appropriate doc below:
-  * [AWS BASED INSTALL](AWS.md)
-  * [SSH BASED INSTALL](SSH.md)
+  * [AWS BASED INSTALL](aws.md)
+  * [SSH BASED INSTALL](ssh.md)
 
 ## Setup
