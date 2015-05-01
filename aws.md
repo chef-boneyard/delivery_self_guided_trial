@@ -32,8 +32,9 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
 3. Edit your environment file
     * README.md in [delivery-cluster](https://github.com/opscode-cookbooks/delivery-cluster) has documentation about all the options in this file. This example gives you the minimal cluster setup. Be sure to replace values with those appropriate for your setup. 
 
-        vi environments/delivery-cluster.json
+        ```vi environments/delivery-cluster.json```
 
+        ```
         {
           "name": "delivery-cluster",
           "description": "A Delivery Cluster",
@@ -67,7 +68,8 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
             }
           }
         }
-      }
-    }
+        ```
 
     * You can name your environment file whatever you want just take note of the name because we use it in later steps.
+
+## [Continue in README](README.md)
