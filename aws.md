@@ -9,11 +9,11 @@ There are few extra steps to do on your provisioning node if you are using aws. 
 
 1. Upload your aws private key:
 
-        ```scp -i ~/.ssh/jmorrow-aws.pem ~/.ssh/jmorrow-aws.pem ubuntu@10.194.25.100:/home/ubuntu/.ssh/jmorrow-aws.pem```
+        scp -i ~/.ssh/jmorrow-aws.pem ~/.ssh/jmorrow-aws.pem ubuntu@10.194.25.100:/home/ubuntu/.ssh/jmorrow-aws.pem
         
 2. Upload your aws configuration
 
-        ```scp -i ~/.ssh/jmorrow-aws.pem -r ~/.aws ubuntu@10.194.25.100:/home/ubuntu/.aws```
+        scp -i ~/.ssh/jmorrow-aws.pem -r ~/.aws ubuntu@10.194.25.100:/home/ubuntu/.aws
 
 ## Additional AWS Setup
 You will need to have an aws security group with appropriate ports open. Please refer to the docs in [delivery-cluster](https://github.com/opscode-cookbooks/delivery-cluster) for the list of ports required.
