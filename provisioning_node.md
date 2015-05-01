@@ -11,7 +11,7 @@ If you choose not to use a provisioning node do this on your workstation. These 
 2. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 3. [Install Chefdk](https://downloads.chef.io/chef-dk/)
 4. Install 'knife push': ```chef gem install knife-push```
-4. Get License Key: ```curl -o delivery.license '{your_license_url}'```
-5. Get Delivery Cluster: ```git clone https://github.com/opscode-cookbooks/delivery-cluster.git```
+5. Get License Key: ```curl -o delivery.license '{your_license_url}'```
+6. Get Delivery Cluster: ```git clone https://github.com/opscode-cookbooks/delivery-cluster.git```
 
 ### [Continue in README](README.md)
