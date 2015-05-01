@@ -5,5 +5,8 @@ We use chef-provisioning to create, upgrade, and manage the Delivery Cluster. Wh
 Use your existing means to provision a new node with one of our supported platforms. This machine does not need to be very powerful since it just runs the provisioning code. In AWS we generally use an t2.micro (Single CPU 2.5GHz, 1 GiB Mem, 8 GiB Disk).
 
 ## Setup Provisioning Node
-If you choose not to use a provisioning node do this on your workstation.
+If you choose not to use a provisioning node do this on your workstation. These use generic install instructions for the prerequisites if you perfer a different install method it should be fine to use your own.
 
+1. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2. [Install Chefdk](https://downloads.chef.io/chef-dk/)
+3. Get Delivery Cluster: ```git clone https://github.com/opscode-cookbooks/delivery-cluster.git```
