@@ -42,29 +42,30 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
           "chef_type": "environment",
           "override_attributes": {
             "delivery-cluster": {
-            "id": "aws-example",
-            "driver": "aws",
-            "aws": {
-              "key_name": "jmorrow-aws.pem",
-              "ssh_username": "ubuntu",
-              "image_id": "ami-3d50120d",
-              "subnet_id": "subnet-19ac017c",
-              "security_group_ids": "sg-cbacf8ae",
-              "use_private_ip_for_ssh": true
-            },
-            "delivery": {
-              "flavor": "c3.xlarge",
-              "enterprise": "aws-example",
-              "version": "latest",
-              "license_file": "/home/ubuntu/delivery.license"
-            },
-            "chef-server": {
-              "flavor": "c3.xlarge",
-              "organization": "aws-example"
-            },
-            "builders": {
-              "flavor": "c3.large",
-              "count": 3
+              "id": "aws-example",
+              "driver": "aws",
+              "aws": {
+                "key_name": "jmorrow-aws.pem",
+                "ssh_username": "ubuntu",
+                "image_id": "ami-3d50120d",
+                "subnet_id": "subnet-19ac017c",
+                "security_group_ids": "sg-cbacf8ae",
+                "use_private_ip_for_ssh": true
+              },
+              "delivery": {
+                "flavor": "c3.xlarge",
+                "enterprise": "aws-example",
+                "version": "latest",
+                "license_file": "/home/ubuntu/delivery.license"
+              },
+              "chef-server": {
+                "flavor": "c3.xlarge",
+                "organization": "aws-example"
+              },
+              "builders": {
+                "flavor": "c3.large",
+                "count": 3
+              }
             }
           }
         }
