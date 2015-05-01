@@ -45,7 +45,7 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
               "id": "aws-example",
               "driver": "aws",
               "aws": {
-                "key_name": "jmorrow-aws.pem",
+                "key_name": "jmorrow-aws",
                 "ssh_username": "ubuntu",
                 "image_id": "ami-3d50120d",
                 "subnet_id": "subnet-19ac017c",
