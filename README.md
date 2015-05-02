@@ -85,6 +85,7 @@ To interact with delivery we suggest you use our cli on your workstation. Curren
 
 ## Creating Projects, Pipelines, and Changes
 We will work through a few examples to give you a sense of the different paths to get a project going in Delivery:
+
 1. [Creating a new cookbook and importing it into Delivery](new_cookbook.md)
 2. [Import and existing cookbook](import_cookbook.md)
 
