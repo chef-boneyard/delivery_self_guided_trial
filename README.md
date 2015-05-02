@@ -81,4 +81,5 @@ We will work through a few examples to give you a sense of the different paths t
 
 1. [Create and Import a new cookbook](new_cookbook.md)
 2. [Import and existing cookbook](import_cookbook.md)
+3. [Create cookbook manual delivery steps](new_cookbook_manual.md)
 
