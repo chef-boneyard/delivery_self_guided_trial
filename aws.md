@@ -73,4 +73,4 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
 
     * You can name your environment file whatever you want just take note of the name because we use it in later steps.
 
-#### [Continue in README](README.md)
+### [Continue in README](README.md)
