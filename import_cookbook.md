@@ -62,3 +62,5 @@ In this example we will import an existing cookbook into Delivery. Do these step
         delivery init
   * Creates a new project in Delivery, pushes the master branch, creates a feature branch, generates a default delivery project config file, pushes first change for review, and opens browser to the change.
   * This sets your new cookbook up to be built with [delivery-truck](https://github.com/opscode-cookbooks/delivery-truck). This is Chef's opensource build cookbook for chef cookbooks.
+
+#### [Continue in README](README.md)
