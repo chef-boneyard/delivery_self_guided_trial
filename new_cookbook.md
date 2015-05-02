@@ -19,7 +19,7 @@ In this example we will create a new cookbook and import it into Delivery. Do th
 
         git add .
         git commit -m 'Initial Commit'
-  * Initializes a git repo and create a master branch with an initial commit.
+  * Initializes a git repo and creates a master branch with an initial commit.
 
 3. Get a Delivery API token
 
