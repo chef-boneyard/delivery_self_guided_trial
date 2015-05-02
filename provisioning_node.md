@@ -14,4 +14,4 @@ If you choose not to use a provisioning node do this on your workstation. These 
 5. Get License Key: ```curl -o delivery.license '{your_license_url}'```
 6. Get Delivery Cluster: ```git clone https://github.com/opscode-cookbooks/delivery-cluster.git```
 
-### [Continue in README](README.md)
+#### [Continue in README](README.md)
