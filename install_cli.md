@@ -12,3 +12,5 @@ To interact with delivery we suggest you use our cli on your workstation. Curren
 ##### RHEL/EL (This install is the least tested...)
 1. ```curl -o delivery-cli.rpm https://s3.amazonaws.com/delivery-packages/cli/delivery-cli-20150408004719-1.x86_64.rpm```
 2. ```sudo yum install delivery-cli.rpm```
+
+#### [Continue in README](README.md)
