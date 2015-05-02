@@ -21,7 +21,7 @@ An important consideration in picking your install method/location is network ac
     * Note: Sometimes the first converge fails on the build nodes run the above step again and it should fix it.
     * Note: For AWS this step creates instances. If there are any failures check your aws console for nodes without names. These can be removed.
 
-4. Sanity Check (from inside delivery-cluster)
+4. [Sanity Check](sanity_check.md) (from inside delivery-cluster)
   * Chef Server
     1. Get Chef Server url
 
@@ -39,3 +39,52 @@ An important consideration in picking your install method/location is network ac
   * Build Nodes
     1. ```knife node status```
       * All build nodes should report available.
+
+## Setup Delivery
+In delivery there are multiple levels of organization they are enterprises, organizations, and projects. The provisioning step created the initial enterprise you specified in your environment file. Enterprises are designed to be units of multi-tenency with separate sets of organizations and users. Next we will setup the delivery by adding users and organizations.
+
+### Create an organization
+We normally suggest creating a sandbox org where you can have a test project to play around with.
+
+1. Log into the webui with the admin credentials you got earlier
+
+        cat ~/delivery-cluster/.chef/delivery-cluster-data/aws-example.creds
+       
+2. Click 'Organizations' in the left column
+3. Click the large orange box on right in header
+4. Enter organization name (sandbox) and save
+
+### Create users
+If you set this up ldap integration you still need to create users in delivery, but we will use ldap to get most of the user details and to authenticate them.
+
+1. Log into the webui with the admin credentials you got earlier
+
+        cat ~/delivery-cluster/.chef/delivery-cluster-data/aws-example.creds
+       
+2. Click 'Users' in the left column
+3. Click the large grey box on right in header
+4. Enter user details and save (Give yourself all roles)
+5. Sign-out of the 'admin' acocunt by clicking the user block in the left column (top dark blue box)
+6. Sign-in with your account
+7. Create any additional users you need
+
+## Installing the delivery-cli
+To interact with delivery we suggest you use our cli on your workstation. Currently we support Mac, Ubuntu 14.04, RHEL 6.5, EL 6.5.
+
+##### Mac
+1. Download the [package](https://s3.amazonaws.com/delivery-packages/cli/deliverycli-20150415170013-1.pkg).
+2. Click the pkg and install
+
+##### Ubuntu
+1. ```curl https://packagecloud.io/install/repositories/chef/current/script.deb | sudo bash```
+2. ```sudo apt-get install delivery-cli```
+
+##### RHEL/EL (This install is the least tested...)
+1. ```curl -o delivery-cli.rpm https://s3.amazonaws.com/delivery-packages/cli/delivery-cli-20150408004719-1.x86_64.rpm```
+2. ```sudo yum install delivery-cli.rpm```
+
+## Creating Projects, Pipelines, and Changes
+We will work through a few examples to give you a sense of the different paths to get a project going in Delivery:
+1. [Creating a new cookbook and importing it into Delivery](new_cookbook.md)
+2. [Import and existing cookbook](import_cookbook.md)
+
