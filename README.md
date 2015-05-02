@@ -69,9 +69,12 @@ If you set this up ldap integration you still need to create users in delivery, 
 7. Create any additional users you need
 
 ## Setup workstation
-1.
-2.
-3. [Install Delivery CLI](install_cli.md)
+
+1. Install build-essential on linux or developer tools on mac
+2. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+3. [Install Chefdk](https://downloads.chef.io/chef-dk/)
+4. Install 'knife push': ```chef gem install knife-push```
+5. [Install Delivery CLI](install_cli.md)
 
 ## Creating Projects, Pipelines, and Changes
 We will work through a few examples to give you a sense of the different paths to get a project going in Delivery:
