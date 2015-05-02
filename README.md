@@ -51,7 +51,7 @@ We normally suggest creating a sandbox org where you can have a test project to 
         cat ~/delivery-cluster/.chef/delivery-cluster-data/aws-example.creds
        
 2. Click 'Organizations' in the left column
-3. Click the large orange box on right in header
+3. Click the large orange box on left in header
 4. Enter organization name (sandbox) and save
 
 ### Create users
@@ -62,7 +62,7 @@ If you set this up ldap integration you still need to create users in delivery, 
         cat ~/delivery-cluster/.chef/delivery-cluster-data/aws-example.creds
        
 2. Click 'Users' in the left column
-3. Click the large grey box on right in header
+3. Click the large grey box on left in header
 4. Enter user details and save (Give yourself all roles)
 5. Sign-out of the 'admin' acocunt by clicking the user block in the left column (top dark blue box)
 6. Sign-in with your account
