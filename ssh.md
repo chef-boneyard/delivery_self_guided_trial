@@ -45,7 +45,7 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
               "driver": "ssh",
               "aws": {
                 "ssh_username": "ubuntu",
-                "key_file": "~/.ssh/jmorrow-aws.pem",
+                "key_file": "~/.ssh/jmorrow-aws.pem"
               },
               "delivery": {
                 "ip": "33.33.33.11",
@@ -56,6 +56,7 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
               "chef-server": {
                  "ip": "33.33.33.10",
                  "organization": "ssh-example"
+              },
               "builders": {
                 "count": 3,
                 "1": { "ip": "33.33.33.14" },
