@@ -1,5 +1,7 @@
 # Import cookbook
-In this example we will import an existing cookbook into Delivery. Do these steps on your workstation.
+
+In this example we will import an existing cookbook into Delivery. Do
+these steps on your workstation.
 
 1. Make a working directory
 
@@ -16,7 +18,10 @@ In this example we will import an existing cookbook into Delivery. Do these step
         git clone https://github.com/opscode-cookbooks/delivery-truck.git
         cd delivery-truck
         ```
-    * In this case we are importing from git. Delivery-truck already has a delivery config file so the init step below will not create a new review. Instead it will just push the project to your delivery server and create a pipeline.
+    * In this case we are importing from git. Delivery-truck already
+      has a delivery config file so the init step below will not
+      create a new review. Instead it will just push the project to
+      your delivery server and create a pipeline.
     
   * Cookbook hosted in git
   
@@ -36,7 +41,8 @@ In this example we will import an existing cookbook into Delivery. Do these step
           git add .
           git commit -m 'Initial Commit'
           ```
-    * Initializes cookbook as a git repo and creates a master branch with an initial commit.
+    * Initializes cookbook as a git repo and creates a master branch
+      with an initial commit.
           
   * Cookbook Archive
 
@@ -50,7 +56,8 @@ In this example we will import an existing cookbook into Delivery. Do these step
         git commit -m 'Initial Commit'
         cd push-jobs
         ```
-    * Initializes cookbook as a git repo and creates a master branch with an initial commit.
+    * Initializes cookbook as a git repo and creates a master branch
+      with an initial commit.
     * This cookbook will fail linting but shows the import process.
     
 4. Get a Delivery API token
@@ -60,7 +67,12 @@ In this example we will import an existing cookbook into Delivery. Do these step
 5. Initialize the cookbook for Delivery
 
         delivery init
-  * Creates a new project in Delivery, pushes the master branch, creates a feature branch, generates a default delivery project config file, pushes first change for review, and opens browser to the change.
-  * This sets your new cookbook up to be built with [delivery-truck](https://github.com/opscode-cookbooks/delivery-truck). This is Chef's opensource build cookbook for chef cookbooks.
+  * Creates a new project in Delivery, pushes the master branch,
+    creates a feature branch, generates a default delivery project
+    config file, pushes first change for review, and opens browser to
+    the change.
+  * This sets your new cookbook up to be built with
+    [delivery-truck](https://github.com/opscode-cookbooks/delivery-truck). This
+    is Chef's opensource build cookbook for chef cookbooks.
 
 #### [Continue in README](README.md)

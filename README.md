@@ -1,11 +1,27 @@
 # Delivery Self Guided Trial
+
 Welcome to the Delivery Self Guided Trial
 
-Delivery Trials are invite only and require a license key to complete the install, so if you stumble here on your own please request an [INVITE](https://www.chef.io/delivery/) or speak with your account rep.
+Delivery Trials are invite only and require a license key to complete
+the install. If you've stumbled here on your own, please request an
+[INVITE](https://www.chef.io/delivery/) or speak with your Chef
+account representative.
 
-These docs will guide you through setting up delivery and configuring pipelines once it is setup. You will install the delivery cluster on your own infrastructure using chef provisioning and your license key. We currently support two install methods. The first is AWS. Using this method provisioning will take care of creating all the resources and setting them up. The second is SHH. This method is used in all other environments and assumes you have created machines and have ssh access with passwordless SUDO on the boxes.
+These docs will guide you through setting up delivery and configuring
+pipelines once it is setup. You will install the delivery cluster on
+your own infrastructure using chef provisioning and your license
+key. We currently support two install methods. The first is AWS. Using
+this method provisioning will take care of creating all the resources
+and setting them up. The second is SHH. This method is used in all
+other environments and assumes you have created machines and have ssh
+access with passwordless SUDO on the boxes.
 
-An important consideration in picking your install method/location is network access. If you will be integrating with any apis make sure you can access them from the environment you choose to install delivery in. Often times we setup a cluster only to find an internal api we want hit is not available. Think things like Jenkins or your own internal deployment tool, etc.
+An important consideration in picking your install method/location is
+network access. If you will be integrating with any apis make sure you
+can access them from the environment you choose to install delivery
+in. Often times we setup a cluster only to find an internal api we
+want hit is not available. Think things like Jenkins or your own
+internal deployment tool, etc.
 
 ## Installation
 1. Create a provisioning node:
@@ -17,9 +33,13 @@ An important consideration in picking your install method/location is network ac
 
         CHEF_ENV=delivery-cluster chef exec rake setup:cluster
 
-    * Note: delivery-cluster should match the name of the environment file you created earlier.
-    * Note: Sometimes the first converge fails on the build nodes run the above step again and it should fix it.
-    * Note: For AWS this step creates instances. If there are any failures check your aws console for nodes without names. These can be removed.
+    * Note: delivery-cluster should match the name of the environment
+      file you created earlier.
+    * Note: Sometimes the first converge fails on the build nodes run
+      the above step again and it should fix it.
+    * Note: For AWS this step creates instances. If there are any
+      failures check your aws console for nodes without names. These
+      can be removed.
 
 4. Sanity Check (from inside delivery-cluster)
   * Chef Server
@@ -41,10 +61,18 @@ An important consideration in picking your install method/location is network ac
       * All build nodes should report available.
 
 ## Setup Delivery
-In delivery there are multiple levels of organization they are enterprises, organizations, and projects. The provisioning step created the initial enterprise you specified in your environment file. Enterprises are designed to be units of multi-tenency with separate sets of organizations and users. Next we will setup the delivery by adding users and organizations.
+
+In delivery there are multiple levels of organization they are
+enterprises, organizations, and projects. The provisioning step
+created the initial enterprise you specified in your environment
+file. Enterprises are designed to be units of multi-tenency with
+separate sets of organizations and users. Next we will setup the
+delivery by adding users and organizations.
 
 ### Create an organization
-We normally suggest creating a sandbox org where you can have a test project to play around with.
+
+We normally suggest creating a sandbox org where you can have a test
+project to play around with.
 
 1. Log into the webui with the admin credentials you got earlier
 
@@ -55,7 +83,10 @@ We normally suggest creating a sandbox org where you can have a test project to 
 4. Enter organization name (sandbox) and save
 
 ### Create users
-If you set this up ldap integration you still need to create users in delivery, but we will use ldap to get most of the user details and to authenticate them.
+
+If you set this up ldap integration you still need to create users in
+delivery, but we will use ldap to get most of the user details and to
+authenticate them.
 
 1. Log into the webui with the admin credentials you got earlier
 
@@ -64,7 +95,8 @@ If you set this up ldap integration you still need to create users in delivery, 
 2. Click 'Users' in the left column
 3. Click the large grey box on left in header
 4. Enter user details and save (Give yourself all roles)
-5. Sign-out of the 'admin' acocunt by clicking the user block in the left column (top dark blue box)
+5. Sign-out of the 'admin' acocunt by clicking the user block in the
+   left column (top dark blue box)
 6. Sign-in with your account
 7. Create any additional users you need
 
@@ -77,7 +109,9 @@ If you set this up ldap integration you still need to create users in delivery, 
 5. [Install Delivery CLI](install_cli.md)
 
 ## Creating Projects, Pipelines, and Changes
-We will work through a few examples to give you a sense of the different paths to get a project going in Delivery:
+
+We will work through a few examples to give you a sense of the
+different paths to get a project going in Delivery:
 
 1. [Create and Import a new cookbook](new_cookbook.md)
 2. [Import and existing cookbook](import_cookbook.md)
