@@ -21,7 +21,7 @@ An important consideration in picking your install method/location is network ac
     * Note: Sometimes the first converge fails on the build nodes run the above step again and it should fix it.
     * Note: For AWS this step creates instances. If there are any failures check your aws console for nodes without names. These can be removed.
 
-4. [Sanity Check](sanity_check.md) (from inside delivery-cluster)
+4. Sanity Check (from inside delivery-cluster)
   * Chef Server
     1. Get Chef Server url
 
