@@ -25,14 +25,14 @@ An important consideration in picking your install method/location is network ac
   * Chef Server
     1. Get Chef Server url
 
-        ```cat ~/delivery-cluster/.chef/delivery-cluster-data/knife.rb```
+        ```$ chef exec rake info:list_core_services```
 
     2. Navigate to 'chef_server_url' and login with 'delivery:delivery'
     3. Click on 'Nodes' you should see at least 4
   * Delivery
     1. Get Credentials and URL:
 
-        ```cat ~/delivery-cluster/.chef/delivery-cluster-data/aws-example.creds```
+        ```$ chef exec rake info:delivery_creds```
 
       * aws-example should match your cluster id in the environment file.
     2. Navigate to the 'Web Login' and use the admin credentials to login
@@ -48,7 +48,7 @@ We normally suggest creating a sandbox org where you can have a test project to 
 
 1. Log into the webui with the admin credentials you got earlier
 
-        cat ~/delivery-cluster/.chef/delivery-cluster-data/aws-example.creds
+        $ chef exec rake info:delivery_creds
        
 2. Click 'Organizations' in the left column
 3. Click the large orange box on left in header
@@ -59,7 +59,7 @@ If you set this up ldap integration you still need to create users in delivery, 
 
 1. Log into the webui with the admin credentials you got earlier
 
-        cat ~/delivery-cluster/.chef/delivery-cluster-data/aws-example.creds
+        $ chef exec rake info:delivery_creds
        
 2. Click 'Users' in the left column
 3. Click the large grey box on left in header
@@ -85,6 +85,7 @@ We will work through a few examples to give you a sense of the different paths t
 
 ## LICENSE AND AUTHORS
 - Author: Jon Morrow (<jmorrow@chef.io>)
+- Author: Salim Afiune (<afiune@chef.io>)
 
 ```text
 Copyright:: 2015 Chef Software, Inc
