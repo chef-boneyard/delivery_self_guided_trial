@@ -43,7 +43,7 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
             "delivery-cluster": {
               "id": "ssh-example",
               "driver": "ssh",
-              "aws": {
+              "ssh": {
                 "ssh_username": "ubuntu",
                 "key_file": "~/.ssh/jmorrow-aws.pem"
               },
