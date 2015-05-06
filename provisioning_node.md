@@ -9,12 +9,18 @@ If you choose not to use a provisioning node do this on your workstation. These 
 
 1. Install development environment
 	* Debian based (apt)
+        ```bash 
         apt-get install build-essential
+        ```
     * RHEL based (yum)
+        ```bash 
         yum groupinstall "Development Tools"
+        ```
     * OS X
+        ```bash 
         xcode-select --install
-        
+        ```
+
 2. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 3. [Install Chefdk](https://downloads.chef.io/chef-dk/)
 4. Install 'knife push': ```chef gem install knife-push```
