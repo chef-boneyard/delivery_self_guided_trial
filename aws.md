@@ -1,31 +1,31 @@
 # AWS Install Guide
 
 This guide will help you setup a Delivery cluster in AWS. This will
-invlove creating 6+ new machines depending on what options you choose
+involve creating 6+ new machines depending on what options you choose
 to enable.
 
 ## Create Provisioning Node
 
-You will need a provising node to manage your cluster:
+You will need a provisioning node to manage your cluster:
 [Creating a Provisioning Node](provisioning_node.md)
 
 ## AWS Specific Setup on Provisioning Node
 
 There are few extra steps to do on your provisioning node if you are
-using aws. Run these from your local machine and replace with the
+using AWS. Run these from your local machine and replace with the
 values for your keys.
 
-1. Upload your aws private key:
+1. Upload your AWS private key:
 
         scp -i ~/.ssh/jmorrow-aws.pem ~/.ssh/jmorrow-aws.pem ubuntu@10.194.25.100:/home/ubuntu/.ssh/jmorrow-aws.pem
-        
-2. Upload your aws configuration
+
+2. Upload your AWS configuration
 
         scp -i ~/.ssh/jmorrow-aws.pem -r ~/.aws ubuntu@10.194.25.100:/home/ubuntu/.aws
 
 ## Additional AWS Setup
 
-You will need to have an aws security group with appropriate ports
+You will need to have an AWS security group with appropriate ports
 open. Please refer to the docs in
 [delivery-cluster](https://github.com/opscode-cookbooks/delivery-cluster)
 for the list of ports required.
@@ -40,7 +40,7 @@ provisioning. We use an environment file to do this.
 
         cd ~/delivery-cluster
 
-2. Ensure you have an 'environments' folder
+2. Ensure you have an 'environments' directory
 
         mkdir environments
 

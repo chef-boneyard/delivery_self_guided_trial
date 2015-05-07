@@ -15,8 +15,8 @@ Delivery. Do these steps on your workstation.
 
         chef generate cookbook new-cookbook
         cd new-cookbook
-  * This use chefdk to generate a new cookbook including a defaualt
-    recipe and default chefspec tests
+  * This use ChefDK to generate a new cookbook including a default
+    recipe and default ChefSpec tests
 
 4. Create initial commit
 
@@ -33,11 +33,11 @@ Delivery. Do these steps on your workstation.
 
         delivery init
   * Creates a new project in Delivery, pushes the master branch,
-    creates a feature branch, generates a default delivery project
+    creates a feature branch, generates a default Delivery project
     config file, pushes first change for review, and opens browser to
     the change.
   * This sets your new cookbook up to be built with
     [delivery-truck](https://github.com/opscode-cookbooks/delivery-truck). This
-    is Chef's opensource build cookbook for chef cookbooks.
+    is Chef's open-source build cookbook for chef cookbooks.
 
 #### [Continue in README](README.md)

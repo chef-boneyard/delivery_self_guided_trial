@@ -7,13 +7,13 @@ the install. If you've stumbled here on your own, please request an
 [INVITE](https://www.chef.io/delivery/) or speak with your Chef
 account representative.
 
-These docs will guide you through setting up delivery and configuring
-pipelines once it is setup. You will install the delivery cluster on
+These docs will guide you through setting up Delivery and configuring
+pipelines once it is setup. You will install the Delivery cluster on
 your own infrastructure using chef provisioning and your license
 key. We currently support two install methods. The first is AWS. Using
-this method provisioning will take care of creating all the resources
-and setting them up. The second is SHH. This method is used in all
-other environments and assumes you have created machines and have ssh
+this method of provisioning will take care of creating all the resources
+and setting them up. The second is SSH. This method is used in all
+other environments and assumes you have created machines and have SSH
 access with passwordless SUDO on the boxes.
 
 An important consideration in picking your install method/location is
@@ -38,7 +38,7 @@ internal deployment tool, etc.
     * Note: Sometimes the first converge fails on the build nodes run
       the above step again and it should fix it.
     * Note: For AWS this step creates instances. If there are any
-      failures check your aws console for nodes without names. These
+      failures check your AWS console for nodes without names. These
       can be removed.
 
 4. Sanity Check (from inside delivery-cluster)
@@ -71,31 +71,31 @@ delivery by adding users and organizations.
 
 ### Create an organization
 
-We normally suggest creating a sandbox org where you can have a test
+We normally suggest creating a sandbox organization where you can have a test
 project to play around with.
 
-1. Log into the webui with the admin credentials you got earlier
+1. Log into the web-UI with the admin credentials you got earlier
 
         $ chef exec rake info:delivery_creds
-       
+
 2. Click 'Organizations' in the left column
 3. Click the large orange box on left in header
 4. Enter organization name (sandbox) and save
 
 ### Create users
 
-If you set this up ldap integration you still need to create users in
-delivery, but we will use ldap to get most of the user details and to
+If you set up LDAP integration you still need to create users in
+delivery, but we will use LDAP to get most of the user details and to
 authenticate them.
 
-1. Log into the webui with the admin credentials you got earlier
+1. Log into the web-UI with the admin credentials you got earlier
 
         $ chef exec rake info:delivery_creds
-       
+
 2. Click 'Users' in the left column
 3. Click the large grey box on left in header
 4. Enter user details and save (Give yourself all roles)
-5. Sign-out of the 'admin' acocunt by clicking the user block in the
+5. Sign-out of the 'admin' account by clicking the user block in the
    left column (top dark blue box)
 6. Sign-in with your account
 7. Create any additional users you need
@@ -104,7 +104,7 @@ authenticate them.
 
 1. Install build-essential on linux or developer tools on mac
 2. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-3. [Install Chefdk](https://downloads.chef.io/chef-dk/)
+3. [Install ChefDK](https://downloads.chef.io/chef-dk/)
 4. Install 'knife push': ```chef gem install knife-push```
 5. [Install Delivery CLI](install_cli.md)
 

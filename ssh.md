@@ -1,12 +1,12 @@
 # SSH Install Guide
 
 This guide will help you setup a Delivery cluster using SSH. This will
-invlove creating 6+ new machines depending on what options you choose
+involve creating 6+ new machines depending on what options you choose
 to enable.
 
 ## Create Provisioning Node
 
-You will need a provising node to manage your cluster:
+You will need a provisioning node to manage your cluster:
 [Creating a Provisioning Node](provisioning_node.md)
 
 ## Create Additional Nodes
@@ -15,16 +15,16 @@ You will next create nodes for the delivery infrastructure. For the
 minimal setup you will need 5 additional nodes. In AWS we use
 c3.xlarge machines (8 CPU 2.5GHz, 7.5 GiB Mem, 2 x40 GiB Disk). You
 can probably get away with something a little smaller as long as you
-have multiple cores. For each of these machines ensure you can ssh and
+have multiple cores. For each of these machines ensure you can SSH and
 SUDO without a password from the provisioning node.
 
 ## SSH Specific Setup on Provisioning Node
 
 There are few extra steps to do on your provisioning node if you are
-using ssh. Run these from your local machine and replace with the
+using SSH. Run these from your local machine and replace with the
 values for your keys.
 
-1. Upload your aws private key:
+1. Upload your AWS private key:
 
         scp -i ~/.ssh/jmorrow-aws.pem ~/.ssh/jmorrow-aws.pem ubuntu@10.194.25.100:/home/ubuntu/.ssh/jmorrow-aws.pem
 
