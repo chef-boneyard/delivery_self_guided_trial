@@ -1,12 +1,12 @@
 ## Installing the Delivery CLI
 
-To interact with delivery we suggest you use our cli on your
+To interact with Delivery we suggest you use our CLI on your
 workstation. Currently we support Mac, Ubuntu 14.04, RHEL 6.5, EL 6.5.
 
 ##### Mac
 1. Download the
    [package](https://s3.amazonaws.com/delivery-packages/cli/deliverycli-20150415170013-1.pkg).
-2. Click the pkg and install
+2. Click the package and install
 
 ##### Ubuntu
 

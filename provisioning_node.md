@@ -17,12 +17,12 @@ t2.micro (1 CPU 2.5GHz, 1 GiB Mem, 8 GiB Disk).
 
 If you choose not to use a provisioning node do this on your
 workstation. These use generic install instructions for the
-prerequisites if you perfer a different install method it should be
+prerequisites if you prefer a different install method it should be
 fine to use your own. You will want open these links in a new tab.
 
 1. Install build-essential on linux or developer tools on mac
 2. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-3. [Install Chefdk](https://downloads.chef.io/chef-dk/)
+3. [Install ChefDK](https://downloads.chef.io/chef-dk/)
 4. Install 'knife push': ```chef gem install knife-push```
 5. Get License Key: ```curl -o delivery.license '{your_license_url}'```
 6. Get Delivery Cluster: ```git clone https://github.com/opscode-cookbooks/delivery-cluster.git```
