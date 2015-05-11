@@ -1,5 +1,7 @@
 # Create New Cookbook Manual Delivery Steps
-In this example we will create a new cookbook, but do all of the delivery steps manually. Run the commands on your workstation.
+
+In this example we will create a new cookbook, but do all of the
+delivery steps manually. Run the commands on your workstation.
 
 1. Create project in Delivery
   1. Log into the webui with the admin credentials you got earlier
@@ -24,13 +26,15 @@ In this example we will create a new cookbook, but do all of the delivery steps 
 
         chef generate cookbook .
 
-  * This use chefdk to generate a new cookbook including a defaualt recipe and default chefspec tests
+  * This use chefdk to generate a new cookbook including a defaualt
+    recipe and default chefspec tests
 
 4. Create initial commit
 
         git add .
         git commit -m 'Initial Commit'
-  * Initializes a git repo and creates a master branch with an initial commit.
+  * Initializes a git repo and creates a master branch with an initial
+    commit.
 
 5. Push master branch
 
@@ -47,7 +51,8 @@ In this example we will create a new cookbook, but do all of the delivery steps 
   3. Click 'sandbox'
   4. Click 'new-project2'
   5. In the page header click the right small grey box './`\\./'
-  6. Enter master for 'Pipeline Name' and master for 'Pipeline Base' and save
+  6. Enter master for 'Pipeline Name' and master for 'Pipeline Base'
+     and save
 
 7. Initialize the cookbook for Delivery
   1. Create feature branch
@@ -78,7 +83,9 @@ In this example we will create a new cookbook, but do all of the delivery steps 
           ]
         }
         ```
-    * This sets your new cookbook up to be built with [delivery-truck](https://github.com/opscode-cookbooks/delivery-truck). This is Chef's opensource build cookbook for chef cookbooks.
+    * This sets your new cookbook up to be built with
+      [delivery-truck](https://github.com/opscode-cookbooks/delivery-truck). This
+      is Chef's opensource build cookbook for chef cookbooks.
     
 8. Add changes to feature branch
 

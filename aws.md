@@ -1,11 +1,19 @@
 # AWS Install Guide
-This guide will help you setup a Delivery cluster in AWS. This will invlove creating 6+ new machines depending on what options you choose to enable.
+
+This guide will help you setup a Delivery cluster in AWS. This will
+invlove creating 6+ new machines depending on what options you choose
+to enable.
 
 ## Create Provisioning Node
-You will need a provising node to manage your cluster: [Creating a Provisioning Node](provisioning_node.md)
+
+You will need a provising node to manage your cluster:
+[Creating a Provisioning Node](provisioning_node.md)
 
 ## AWS Specific Setup on Provisioning Node
-There are few extra steps to do on your provisioning node if you are using aws. Run these from your local machine and replace with the values for your keys.
+
+There are few extra steps to do on your provisioning node if you are
+using aws. Run these from your local machine and replace with the
+values for your keys.
 
 1. Upload your aws private key:
 
@@ -16,10 +24,17 @@ There are few extra steps to do on your provisioning node if you are using aws. 
         scp -i ~/.ssh/jmorrow-aws.pem -r ~/.aws ubuntu@10.194.25.100:/home/ubuntu/.aws
 
 ## Additional AWS Setup
-You will need to have an aws security group with appropriate ports open. Please refer to the docs in [delivery-cluster](https://github.com/opscode-cookbooks/delivery-cluster) for the list of ports required.
+
+You will need to have an aws security group with appropriate ports
+open. Please refer to the docs in
+[delivery-cluster](https://github.com/opscode-cookbooks/delivery-cluster)
+for the list of ports required.
 
 ## Configure Chef Provisioning
-Now that you have a provisioning node with all of the prerequisites setup. The next step is to create a configuration file to drive chef provisioning. We use an environment file to do this.
+
+Now that you have a provisioning node with all of the prerequisites
+setup. The next step is to create a configuration file to drive chef
+provisioning. We use an environment file to do this.
 
 1. Make sure you are in your delivery-cluster directory
 
@@ -30,7 +45,11 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
         mkdir environments
 
 3. Edit your environment file
-    * The README.md in [delivery-cluster](https://github.com/opscode-cookbooks/delivery-cluster) has documentation about all the options in this file. This example gives you the minimal cluster setup. Be sure to replace values with those appropriate for your setup. 
+    * The README.md in
+      [delivery-cluster](https://github.com/opscode-cookbooks/delivery-cluster)
+      has documentation about all the options in this file. This
+      example gives you the minimal cluster setup. Be sure to replace
+      values with those appropriate for your setup.
 
         ```vi environments/delivery-cluster.json```
 
@@ -71,6 +90,7 @@ Now that you have a provisioning node with all of the prerequisites setup. The n
         }
         ```
 
-    * You can name your environment file whatever you want just take note of the name because we use it in later steps.
+    * You can name your environment file whatever you want just take
+      note of the name because we use it in later steps.
 
 #### [Continue in README](README.md)
