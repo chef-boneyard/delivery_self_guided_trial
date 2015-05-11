@@ -20,7 +20,11 @@ workstation. These use generic install instructions for the
 prerequisites if you prefer a different install method it should be
 fine to use your own. You will want open these links in a new tab.
 
-1. Install build-essential on linux or developer tools on mac
+1. Install development environment
+    * Debian based (apt): ``` apt-get install build-essential```
+    * RHEL based (yum): ``` yum groupinstall "Development Tools"```
+    * OS X: ``` xcode-select --install```
+
 2. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 3. [Install ChefDK](https://downloads.chef.io/chef-dk/)
 4. Install 'knife push': ```chef gem install knife-push```
