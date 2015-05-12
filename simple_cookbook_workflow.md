@@ -42,7 +42,6 @@ In this example we will clone a project from Delivery, create a git feature bran
 
         delivery review
 
-        delivery init
   * Pushes the change for review and opens browser to
     the change in the WebUI.
 
