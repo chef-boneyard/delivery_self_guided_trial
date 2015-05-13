@@ -1,6 +1,6 @@
-# Simple Local Development Cookbook Workflow
+# Local Development Cookbook Workflow
 
-In this example we will clone a project from Delivery, create a git feature branch, introduce a change and merge that change back to the master project through the Delivery pipeline
+In this example we will clone a project from Delivery, create a git feature branch, introduce a change, run local tests and finally submit the change for peer review in Delivery
 
 ## pre-requisites
 
@@ -20,9 +20,9 @@ In this example we will clone a project from Delivery, create a git feature bran
         delivery clone sitedbaas --ent=aws-example --org=sandbox --user=binamov --server=10.194.9.211
         Chef Delivery
         Loading configuration from /Users/bakhinamov/workspace
-        Cloning my_enterprise/demo/simple-web to simple-web
+        Cloning aws-example/sandbox/sitedbaas to sitedbaas
         adding remote: ssh://binamov@aws-example@10.194.9.211:8989/aws-example/sandbox/sitedbaas
-  * Clones a project repo and adds a git remote that points at your Delivery server.
+  * Clones a project repo and adds a git remote that points at your Delivery server. *
 
 3. Change into the newly created project directory and create a new feature branch in the cloned project:
 
@@ -51,6 +51,6 @@ In this example we will clone a project from Delivery, create a git feature bran
         # add an --no-open flag if you don't want the change to open in the WebUI
 
   * Pushes the change for review and opens browser to
-    the change in the WebUI.
+    the change in the WebUI. *
 
 #### [Continue in Delivery workflow](simple_delivery_workflow.md)
