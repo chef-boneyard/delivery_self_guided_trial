@@ -1,4 +1,4 @@
-# Simple Cookbook Workflow
+# Simple Local Development Cookbook Workflow
 
 In this example we will clone a project from Delivery, create a git feature branch, introduce a change and merge that change back to the master project through the Delivery pipeline
 
@@ -38,11 +38,19 @@ In this example we will clone a project from Delivery, create a git feature bran
         git add .
         git commit -m "this is the best change ever!"
 
-7. You can now submit your change for Delivery review:
+7. Run lint/unit/syntax tests locally first:
+
+        delivery job verify lint
+        delivery job verify unit
+        delivery job verify syntax
+
+
+8. You can now submit your change for Delivery review:
 
         delivery review
+        # add an --no-open flag if you don't want the change to open in the WebUI
 
   * Pushes the change for review and opens browser to
     the change in the WebUI.
 
-#### [Continue in README](README.md)
+#### [Continue in Delivery workflow](simple_delivery_workflow.md)
