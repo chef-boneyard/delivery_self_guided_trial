@@ -52,4 +52,4 @@ In this example we will clone a project from Delivery, create a git feature bran
 
   *Pushes the change for review and opens browser to the change in the WebUI.*
 
-#### [Continue in Delivery workflow](simple_delivery_workflow.md)
+#### [Continue in Pipeline workflow](simple_pipeline_workflow.md)
