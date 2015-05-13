@@ -22,7 +22,7 @@ In this example we will clone a project from Delivery, create a git feature bran
         Loading configuration from /Users/bakhinamov/workspace
         Cloning aws-example/sandbox/sitedbaas to sitedbaas
         adding remote: ssh://binamov@aws-example@10.194.9.211:8989/aws-example/sandbox/sitedbaas
-  * Clones a project repo and adds a git remote that points at your Delivery server. *
+  *Clones a project repo and adds a git remote that points at your Delivery server.*
 
 3. Change into the newly created project directory and create a new feature branch in the cloned project:
 
@@ -50,7 +50,6 @@ In this example we will clone a project from Delivery, create a git feature bran
         delivery review
         # add an --no-open flag if you don't want the change to open in the WebUI
 
-  * Pushes the change for review and opens browser to
-    the change in the WebUI. *
+  *Pushes the change for review and opens browser to the change in the WebUI.*
 
 #### [Continue in Delivery workflow](simple_delivery_workflow.md)
