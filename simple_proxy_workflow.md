@@ -26,20 +26,20 @@ From there, most browsers will have an option to set up a SOCKS proxy in their a
 
 ### For Firefox
 
-*In Preferences, click the "Advanced" tab, and then the "Network" sub-tab.
+* In Preferences, click the "Advanced" tab, and then the "Network" sub-tab.
 
-*Click "Settings" in the "Connections" section. This should pop up a new window.
+* Click "Settings" in the "Connections" section. This should pop up a new window.
 
-*Select "Manual Proxy Configuration" and put the following information in "SOCKS Host":
+* Select "Manual Proxy Configuration" and put the following information in "SOCKS Host":
  Host: 127.0.0.1
  Port: 1080
 
-*Click "OK"
+* Click "OK"
 
 ### For Chrome
-*In Settings, click "Advanced Settings" at the bottom of the page
+* In Settings, click "Advanced Settings" at the bottom of the page
 
-*In the "Network" section, click "Change Proxy Settings". This will open up your OS's proxy settings.
+* In the "Network" section, click "Change Proxy Settings". This will open up your OS's proxy settings.
 
 #### Windows
 * Select “Connections”
