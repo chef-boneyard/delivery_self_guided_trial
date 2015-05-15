@@ -44,7 +44,7 @@ as an SSH client.
 ## LICENSE AND AUTHORS
 - Author: Jon Morrow (<jmorrow@chef.io>)
 - Author: Salim Afiune (<afiune@chef.io>)
-- Author: Bakh Inamov (bakh@chef.io)
+- Author: Bakh Inamov (b@chef.io)
 - Author: Nick Rycar (rycar@chef.io)
 
 ```text
