@@ -6,7 +6,7 @@ This document will walk you through the process of connecting to your workstatio
 
 ## Prerequisites
 
-You will need an interactive SSH client. All work in the guided trial will be done from inside this node. 
+You will need an interactive SSH client. All work in the guided trial will be done from inside the workstation server. 
 
 ## Log in to your workstation
 
@@ -64,3 +64,5 @@ From there, most browsers will have an option to set up a SOCKS proxy in their a
 * Click Apply
 
 You should now be able to connect to your Delivery Server, Chef Server, and Nodes via your browser.
+
+## Continue to the [Local Development Cookbook workflow](simple_delivery_workflow.md) doc, and let's stage a change for review!

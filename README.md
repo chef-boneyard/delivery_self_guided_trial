@@ -2,124 +2,50 @@
 
 Welcome to the Delivery Self Guided Trial
 
-Delivery Trials are invite only and require a license key to complete
-the install. If you've stumbled here on your own, please request an
-[INVITE](https://www.chef.io/delivery/) or speak with your Chef
-account representative.
+Delivery Trials are currently invite only. If you've stumbled here on
+your own, please request an[INVITE](https://www.chef.io/delivery/) or 
+speak with your Chef account representative.
 
-These docs will guide you through setting up Delivery and configuring
-pipelines once it is setup. You will install the Delivery cluster on
-your own infrastructure using chef provisioning and your license
-key. We currently support two install methods. The first is AWS. Using
-this method of provisioning will take care of creating all the resources
-and setting them up. The second is SSH. This method is used in all
-other environments and assumes you have created machines and have SSH
-access with passwordless SUDO on the boxes.
+These docs will provide you with instructions for accessing your trial 
+environment, and guide you through pushing changes through the delivery
+pipeline. Accessing the environment will require internet access, as well
+as an SSH client.
 
-An important consideration in picking your install method/location is
-network access. If you will be integrating with any apis make sure you
-can access them from the environment you choose to install delivery
-in. Often times we setup a cluster only to find an internal api we
-want hit is not available. Think things like Jenkins or your own
-internal deployment tool, etc.
+## Components
+* Workstation Server / Proxy Bastion
+    - This machine serves both as your working environment for pushing
+    changes through delivery and as a proxy host for accessing the rest
+    of the cluster.
+* Delivery Server
+    - Where the magic happens! This is your target for cloning repositories,
+    pushing changes, and has a web-accessible UI.
+* Chef Server
+    - You will have UI access to the Chef Server to inspect policy and node state
+    as well as track the reporting output for your changes.
+* Delivery Infrastructure
+    - Build Nodes
+        - Not accessible via SSH or Web, but these are the machines your delivery
+        jobs will run from.
+    - Each deployable stage of delivery has its own web-accessible server you can
+    use to validate changes you push through the pipeline. Servers are as follows:
+        - Acceptance
+        - Union
+        - Rehearsal
+        - Delivered
 
-## Installation
-1. Create a provisioning node:
-  * [Creating a provisioning node](provisioning_node.md)
-2. Setup to run provisioning:
-  * [AWS Setup](aws.md)
-  * [SSH Setup](ssh.md)
-3. Run provisioning (from inside delivery-cluster):
-
-        CHEF_ENV=delivery-cluster chef exec rake setup:cluster
-
-    * Note: delivery-cluster should match the name of the environment
-      file you created earlier.
-    * Note: Sometimes the first converge fails on the build nodes run
-      the above step again and it should fix it.
-    * Note: For AWS this step creates instances. If there are any
-      failures check your AWS console for nodes without names. These
-      can be removed.
-
-4. Sanity Check (from inside delivery-cluster)
-  * Chef Server
-    1. Get Chef Server url
-
-        ```$ chef exec rake info:list_core_services```
-
-    2. Navigate to 'chef_server_url' and login with 'delivery:delivery'
-    3. Click on 'Nodes' you should see at least 4
-  * Delivery
-    1. Get Credentials and URL:
-
-        ```$ chef exec rake info:delivery_creds```
-
-      * aws-example should match your cluster id in the environment file.
-    2. Navigate to the 'Web Login' and use the admin credentials to login
-  * Build Nodes
-    1. ```knife node status```
-      * All build nodes should report available.
-
-## Setup Delivery
-
-In delivery there are multiple levels of organization they are
-enterprises, organizations, and projects. The provisioning step
-created the initial enterprise you specified in your environment
-file. Enterprises are designed to be units of multi-tenency with
-separate sets of organizations and users. Next we will setup the
-delivery by adding users and organizations.
-
-### Create an organization
-
-We normally suggest creating a sandbox organization where you can have a test
-project to play around with.
-
-1. Log into the web-UI with the admin credentials you got earlier
-
-        $ chef exec rake info:delivery_creds
-
-2. Click 'Organizations' in the left column
-3. Click the large orange box on left in header
-4. Enter organization name (sandbox) and save
-
-### Create users
-
-If you set up LDAP integration you still need to create users in
-delivery, but we will use LDAP to get most of the user details and to
-authenticate them.
-
-1. Log into the web-UI with the admin credentials you got earlier
-
-        $ chef exec rake info:delivery_creds
-
-2. Click 'Users' in the left column
-3. Click the large grey box on left in header
-4. Enter user details and save (Give yourself all roles)
-5. Sign-out of the 'admin' account by clicking the user block in the
-   left column (top dark blue box)
-6. Sign-in with your account
-7. Create any additional users you need
-
-## Setup workstation
-
-1. Install build-essential on linux or developer tools on mac
-2. [Install Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-3. [Install ChefDK](https://downloads.chef.io/chef-dk/)
-4. Install 'knife push': ```chef gem install knife-push```
-5. [Install Delivery CLI](install_cli.md)
-
-## Creating Projects, Pipelines, and Changes
-
-We will work through a few examples to give you a sense of the
-different paths to get a project going in Delivery:
-
-1. [Create and Import a new cookbook](new_cookbook.md)
-2. [Import and existing cookbook](import_cookbook.md)
-3. [Create cookbook manual delivery steps](new_cookbook_manual.md)
+## Setup Documents
+1. Workstation Setup
+    * [Log into your workstation, and set up a SOCKS proxy](simple_proxy_workflow.md)
+2. Configure Your Workspace
+    * [Clone a project, and create a new change](simple_cookbook_workflow.md)
+3. Push a Change Through Delivery
+    * [Working with the Delivery UI](simple_UI_workflow.md)
 
 ## LICENSE AND AUTHORS
 - Author: Jon Morrow (<jmorrow@chef.io>)
 - Author: Salim Afiune (<afiune@chef.io>)
+- Author: Bakh Inamov (bakh@chef.io)
+- Author: Nick Rycar (rycar@chef.io)
 
 ```text
 Copyright:: 2015 Chef Software, Inc
