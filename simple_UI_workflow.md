@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-1. You followed the [Local Development Cookbook workflow](simple_delivery_workflow.md) guide and submitted a change for review by running `delivery review`.
+1. You followed the [Local Development Cookbook workflow](simple_cookbook_workflow.md) guide and submitted a change for review by running `delivery review`.
 
 2. You have a SOCKS proxy configured per the [Proxy Setup Document](simple_proxy_workflow.md)
 
