@@ -66,3 +66,5 @@ From there, most browsers will have an option to set up a SOCKS proxy in their a
 You should now be able to connect to your Delivery Server, Chef Server, and Nodes via your browser.
 
 #### Continue to the [Local Development Cookbook workflow](simple_cookbook_workflow.md) doc, and let's stage a change for review!
+
+#### Back to the [README](README.md)
