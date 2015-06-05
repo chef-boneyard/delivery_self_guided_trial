@@ -3,10 +3,10 @@
 Welcome to the Delivery Self Guided Trial
 
 Delivery Trials are currently invite only. If you've stumbled here on
-your own, please request an[INVITE](https://www.chef.io/delivery/) or 
+your own, please request an [INVITE](https://www.chef.io/delivery/) or 
 speak with your Chef account representative.
 
-These docs will provide you with instructions for accessing your trial 
+These docs will provide you with instructions for accessing your trial
 environment, and guide you through pushing changes through the delivery
 pipeline. Accessing the environment will require internet access, as well
 as an SSH client.
