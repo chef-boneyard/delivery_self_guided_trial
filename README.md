@@ -8,14 +8,11 @@ speak with your Chef account representative.
 
 These docs will provide you with instructions for accessing your trial 
 environment, and guide you through pushing changes through the delivery
-pipeline. Accessing the environment will require internet access, as well
-as an SSH client.
+pipeline. Accessing the environment will require internet access, a web browser, as well as an SSH client.
 
 ## Components
-* Workstation Server / Proxy Bastion
-    - This machine serves both as your working environment for pushing
-    changes through delivery and as a proxy host for accessing the rest
-    of the cluster.
+* Workstation Server
+    - This machine serves as your working environment for checking out projects from Chef Delivery and pushing changes through the pipeline.
 * Delivery Server
     - Where the magic happens! This is your target for cloning repositories,
     pushing changes, and has a web-accessible UI.
@@ -24,10 +21,8 @@ as an SSH client.
     as well as track the reporting output for your changes.
 * Delivery Infrastructure
     - Build Nodes
-        - Not accessible via SSH or Web, but these are the machines your delivery
-        jobs will run from.
-    - Each deployable stage of delivery has its own web-accessible server you can
-    use to validate changes you push through the pipeline. Servers are as follows:
+        - Not accessible via SSH or Web, but these are the machines your delivery jobs will run from.
+    - Each deployable stage of delivery has its own web-accessible server you can use to validate changes you push through the pipeline. Servers are as follows:
         - Acceptance
         - Union
         - Rehearsal
@@ -35,7 +30,7 @@ as an SSH client.
 
 ## Setup Documents
 1. Workstation Setup
-    * [Log into your workstation, and set up a SOCKS proxy](simple_proxy_workflow.md)
+    * [Log into your remote workstation](workstation_setup.md)
 2. Configure Your Workspace
     * [Clone a project, and create a new change](simple_cookbook_workflow.md)
 3. Push a Change Through Delivery

@@ -4,9 +4,7 @@
 
 1. You followed the [Local Development Cookbook workflow](simple_cookbook_workflow.md) guide and submitted a change for review by running `delivery review`.
 
-2. You have a SOCKS proxy configured per the [Proxy Setup Document](simple_proxy_workflow.md)
-
-3. You have the following pages open in browser tabs (See your cluster information document for IP addresses):
+2. You have the following pages open in browser tabs (See your cluster information document for IP addresses):
     * Delivery Server
     * Chef Server
     * Acceptance Server
@@ -16,7 +14,7 @@
 
 ## Workflow
 
-1. The `delivery review` command produced a URL to the pipeline. Open that URL in a browser (Or just pull up your delivery server tab, and navigate to your organization and project). You should land on the Status page of your change, running the **Verify** stage. Make sure that the **Unit, Lint and Syntax** phases passed successfully. If any phase failed, click the failed phase to expand the log, troubleshoot and submit a fixing commit (Steps 4-8 of [Local Development Cookbook workflow](simple_delivery_workflow.md) ).
+1. The `delivery review` command produced a URL to the pipeline. Open that URL in a browser (Or just pull up your delivery server tab, and navigate into your organization and project). You should land on the Status page of your change, running the **Verify** stage. Make sure that the **Unit, Lint and Syntax** phases pass successfully. If any phase fails, click the phase to expand the log, troubleshoot and submit a fixing commit (Steps 4-8 of [Local Development Cookbook workflow](simple_delivery_workflow.md) ).
 
   * **NOTE:** You can view the logs on the build servers at any time via the "view logs" link on your project's page.
 

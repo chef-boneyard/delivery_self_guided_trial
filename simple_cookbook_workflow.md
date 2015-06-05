@@ -1,12 +1,12 @@
 # Local Development Cookbook Workflow
 
-In this example we will clone a project from Delivery, create a git feature branch, introduce a change, run local tests and finally submit the change for peer review in Delivery
+In this example we will clone a project from Delivery, create a feature branch, introduce a change, run local tests and finally submit the change for peer review in Delivery.
 
 **Please refer to your cluster information document for server, organization and enterprise names used in this document **
 
 ## Prerequisites
 
-1. Log onto your workstation server, and make a working directory
+1. [Log into your remote workstation](workstation_setup.md), and make a working directory
 
         mkdir ~/workspace && cd ~/workspace
 
@@ -33,7 +33,7 @@ In this example we will clone a project from Delivery, create a git feature bran
 3. Change into the newly created project directory and create a new feature branch in the cloned project:
 
         cd sitedbaas
-        git checkout -b "binamov/bestest-feature-ever"
+        git checkout -b "binamov/greatest-feature-ever"
 
 4. Go ahead and make changes to the cookbook. Some of the easiest things to change are attribute values in `attributes/default.rb`. Don't forget to save the files you change.
 
@@ -49,7 +49,7 @@ In this example we will clone a project from Delivery, create a git feature bran
 
         foodcritic .
         rubocop .
-        rspec .
+        chef exec rspec .
 
 8. You can now submit your change for Delivery review:
 
