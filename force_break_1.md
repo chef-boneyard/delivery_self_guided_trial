@@ -26,28 +26,34 @@ Let's get the change started! Make sure you cd into the httpdbaas directory, and
 
 #### Workflow
 
-1. As before, we're going to need to check out a feature branch, and stage a new update for merge through delivery. Example:
+1. As before, we're going to need to check out a feature branch, and stage a new update for merge through delivery. 
 
-```
-git checkout -b nrycar/apacheupdate
-```
+  * Example:
 
-2. Git has an 'mv' command we can use to rename our recipe, like so:
+  ```
+  git checkout -b nrycar/apacheupdate
+  ```
 
-```
-git mv recipes/install_apache.rb recipes/install.rb
-```
+2. Git has an 'mv' command we can use to rename our recipe.
+
+  * Example:
+
+  ```
+  git mv recipes/install_apache.rb recipes/install.rb
+  ```
 
 3. Bump the cookbook version in `metadata.rb`
 
 4. Make sure local testing passes. 
 
-```
-foodcritic .
-rubocop .
-knife cookbook test httpdbaas -o ..
-chef exec rspec .
-```
+  * Example:
+
+  ```
+  foodcritic .
+  rubocop .
+  knife cookbook test httpdbaas -o ..
+  chef exec rspec .
+  ```
 
 5. Time to stage our change! Just like before, we're going to add our changed files, commit our change, and then submit it to Chef Delivery. 
 
@@ -73,13 +79,13 @@ Once you pull the trigger to deliver, however, is when we hit our first snag:
 
 So, what caused our change, which passed acceptance without issue, to suddenly break in union? 
 
-_CHALLENGE:_ Determine why our change broke, and see if you can determine how to resolve it without reverting the cookbook back to its previous state.
+**CHALLENGE:** Determine why our change broke, and see if you can determine how to resolve it without reverting the cookbook back to its previous state.
 
-_HINTS:_
+**HINTS:**
 
 * The delivery summary page allows you to look at the logs for any of the phases that ran. What does it show for Union's deploy stage?
 
-![Union Log](images/union_log.png)
+  ![Union Log](images/union_log.png)
 
 * Each deploy will kick off a Chef Client run. What does the Run History (viewable in the `Reports` tab in the Chef Server UI) tell us about our latest deploy attempt?
 
@@ -88,3 +94,5 @@ _HINTS:_
   ![Run History Example](images/run_history_example.png)
 
 We'll go over the root cause of the break, as well as some possible remediations in [Part 2](force_break_2.md)
+
+#### Back to the [README](README.md)
