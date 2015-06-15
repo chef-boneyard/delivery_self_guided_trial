@@ -53,8 +53,8 @@ In this example we will clone a project from Delivery, create a feature branch, 
 
 8. You can now submit your change for Delivery review:
 
-        delivery review
-        # add an --no-open flag if you don't want the change to open in the WebUI
+        delivery review --no-open
+        # NOTE: Without the --no-open flag, delivery will attempt to open your change in a browser, which it doesn't have on this remote workstation. Since we have a delivery tab open already, we can view our change there. 
 
   *Pushes the change for review and opens browser to the change in the WebUI.*
 

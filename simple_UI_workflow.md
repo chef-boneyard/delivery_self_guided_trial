@@ -44,4 +44,6 @@
 
 Congratulations! You've just pushed a change through the delivery pipeline! Stay tuned for further updates, and an FAQ/Reference page.
 
+#### Continue to [Scenario: The Apache Cookbook](force_break_1.md)
+
 #### Back to the [README](README.md)

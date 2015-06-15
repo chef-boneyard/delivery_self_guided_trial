@@ -35,6 +35,8 @@ pipeline. Accessing the environment will require internet access, a web browser,
     * [Clone a project, and create a new change](simple_cookbook_workflow.md)
 3. Push a Change Through Delivery
     * [Working with the Delivery UI](simple_UI_workflow.md)
+4. Scenario: The Apache Cookbook
+    * [The Union Break: Part I](force_break_1.md)
 
 ## LICENSE AND AUTHORS
 - Author: Jon Morrow (<jmorrow@chef.io>)
