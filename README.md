@@ -37,6 +37,7 @@ pipeline. Accessing the environment will require internet access, a web browser,
     * [Working with the Delivery UI](simple_UI_workflow.md)
 4. Scenario: The Apache Cookbook
     * [The Union Break: Part I](force_break_1.md)
+    * [The Union Break: Part II](force_break_2.md)
 
 ## LICENSE AND AUTHORS
 - Author: Jon Morrow (<jmorrow@chef.io>)
